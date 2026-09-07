@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Manrope", sans-serif;
+}
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #17231e;
+  background: #f3f5f2;
+  font-synthesis: none;
+  --bg: #f3f5f2;
+  --surface: #fff;
+  --surface-2: #f6f8f6;
+  --text: #17231e;
+  --muted: #78837e;
+  --line: #e6ebe7;
+  --primary: #216f52;
+  --primary-dark: #15583f;
+  --accent: #d8f067;
+  --danger: #e65f4f;
+  --panel-shadow: 0 12px 30px rgba(31, 52, 42, 0.06);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --bg: #0d1512;
+  --surface: #15201b;
+  --surface-2: #1b2822;
+  --text: #edf4f0;
+  --muted: #94a39b;
+  --line: #29372f;
+  --primary: #52b88e;
+  --primary-dark: #73c9a6;
+  --panel-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+@layer base {
+  body { @apply m-0 min-w-80 bg-[var(--bg)] text-[var(--text)]; }
+  button, input, select { font: inherit; }
+  button { @apply cursor-pointer; }
+}

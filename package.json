@@ -1,0 +1,21 @@
+{
+  "name": "myfinance-lite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.2.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-vue": "latest",
+    "pinia": "latest",
+    "tailwindcss": "^4.3.3",
+    "vite": "latest",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}
