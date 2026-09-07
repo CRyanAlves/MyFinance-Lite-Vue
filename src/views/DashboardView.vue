@@ -19,6 +19,13 @@ import TransactionList from "../components/TransactionList.vue";
 const store = useTransactionsStore();
 const { formatCurrency } = useCurrency();
 const recent = computed(() => store.transactions.slice(0, 5));
+const formattedToday = new Intl.DateTimeFormat("pt-BR", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+}).format(new Date());
+const todayLabel =
+  formattedToday.charAt(0).toUpperCase() + formattedToday.slice(1);
 </script>
 
 <template>
@@ -29,7 +36,7 @@ const recent = computed(() => store.transactions.slice(0, 5));
       <div>
         <span
           class="block text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--muted)]"
-          >Segunda-feira, 7 de setembro</span
+          >{{ todayLabel }}</span
         >
         <h1
           class="mt-1.5 flex items-center gap-2 font-display text-[30px] font-bold tracking-[-0.04em] max-[700px]:text-[27px]"
